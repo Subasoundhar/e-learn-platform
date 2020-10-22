@@ -1,0 +1,231 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="../app/css/reset.css">
+      <link rel="stylesheet" href="../app/css/main.css">
+      <title>learner1</title>
+   </head>
+   <body>
+      <section class="h1">
+         <div class="container-fluid-2">
+            <div class="row mr-0">
+               <div class="col-11">
+                  <div class="logo">
+                     <a routerLink="/">E-Learning Platform</a>
+                  </div>
+               </div>        
+               <div class="col-0">
+                  <div class="btn-link">
+                     <a routerLink="/">Logout</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>     
+      <div class="row">
+         <div class="col-3">
+            <div class="list-group-2">
+                <a href="tutor1.html" class="list-group-item list-group-item-action">Tutors</a>
+                <a href="learner1.html" class="list-group-item list-group-item-action active">Learners</a>
+                <a href="course1.html" class="list-group-item list-group-item-action">Courses</a>
+            </div>
+         </div>
+         <div class="col-9">
+            <div class="mainpage2">
+               <section class="detail-part">
+                  <div class="banner-sec">
+                     <div class="row">
+                        <div class="col-9">
+                           <div class="banner-text">
+                              <ul class="nav">
+                                 <li class="nav-item">
+                                    <h4 class="nav-link active">Home/Learners</h4>
+                                 </li>
+                              </ul>
+                              <h2>Learners</h2>
+                           </div>
+                        </div>
+                        <div class="col-2">
+                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                              Create New
+                           </button>
+                           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                 <div class="modal-content">
+                                    <div class="modal-header">
+                                       <h5 class="Create Learner" id="exampleModalLabel">Create Learner</h5>
+                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                       </button>
+                                    </div>
+                                    <div class="modal-body">
+                                       <form>
+                                          <div class="form-group">
+                                             <div class="row">
+                                                <div class="col-4">
+                                                   <label for="formGroupLearnerName">Learner Name</label>
+                                                </div>  
+                                                <div class="col-8">
+                                                   <input type="text" class="form-control" id="formGroupLearnerName" placeholder="LearnerName">
+                                                </div>
+                                             </div>  
+                                          </div>
+                                          <div class="form-group">
+                                             <div class="row">
+                                                <div class="col-4">
+                                                   <label for="formGroupEmailID">Email ID</label>
+                                                </div>  
+                                                <div class="col-8">
+                                                   <input type="text" class="form-control" id="formGroupEmailID" placeholder="EmailID">
+                                                </div>
+                                             </div>  
+                                          </div>
+                                          <div class="form-group">
+                                             <div class="row">
+                                                <div class="col-4">
+                                                   <label for="formGroupPhoneNumber">Phone Number</label>
+                                                </div>  
+                                                <div class="col-8">
+                                                   <input type="text" class="form-control" id="formGroupPhoneNumber" placeholder="PhoneNumber">
+                                                </div>
+                                             </div>  
+                                          </div>
+                                       </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                       <button type="button" class="btn btn-secondary" data-dismiss="modal">save</button>
+                                       <button type="button" class="btn btn-primary">Cancel</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="table-part">
+                     <table class="table">
+                        <thead>
+                           <tr>
+                              <th>Leraner Id</th>
+                              <th>Learner Name</th>
+                              <th>Email ID</th>
+                              <th>Mobile Number</th>
+                              <th>Courses Count</th>
+                              <th>Created Date</th>
+                              <th>Action</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr *ngFor="let tutor of tutorsList">
+                              <td>23</td>
+                              <td>Sankar</td>
+                              <td>sankar@gmail.com</td>
+                              <td>91-9632587041</td>
+                              <td>4</td>
+                              <td>26-02-2020</td>
+                              <td>
+                                 <button class="edit-btn">edit</button>
+                                 <button class="dl-btn ">delete</button>
+                              </td>
+                           </tr>
+                           <tr *ngFor="let tutor of tutorsList">
+                              <td>34</td>
+                              <td>Saranya</td>
+                              <td>saranya@gmail.com</td>
+                              <td>91-9874653210</td>
+                              <td>4</td>
+                              <td>03-06-2019</td>
+                              <td>
+                                 <button class="edit-btn">edit</button>
+                                 <button class="dl-btn ">delete</button>
+                              </td>
+                           </tr>
+                           <tr *ngFor="let tutor of tutorsList">
+                              <td>13</td>
+                              <td>Kavin</td>
+                              <td>kavin@gmail.com</td>
+                              <td>91-9632587041</td>
+                              <td>5</td>
+                              <td>09-12-2019</td>
+                              <td>
+                                 <button class="edit-btn">edit</button>
+                                 <button class="dl-btn ">delete</button>
+                              </td>
+                           </tr>
+                           <tr *ngFor="let tutor of tutorsList">
+                              <td>38</td>
+                              <td>Alphonese</td>
+                              <td>alphonese@gmail.com</td>
+                              <td>91-7852146330</td>
+                              <td>2</td>
+                              <td>19-01-2020</td>
+                              <td>
+                                 <button class="edit-btn">edit</button>
+                                 <button class="dl-btn ">delete</button>
+                              </td>
+                           </tr>
+                           <tr *ngFor="let tutor of tutorsList">
+                              <td>67</td>
+                              <td>Maheshwari</td>
+                              <td>maheshwari@gmail.com</td>
+                              <td>91-9621458730</td>
+                              <td>1</td>
+                              <td>10-09-2019</td>
+                              <td>
+                                 <button class="edit-btn">edit</button>
+                                 <button class="dl-btn ">delete</button>
+                              </td>
+                           </tr>
+                           <tr *ngFor="let tutor of tutorsList">
+                              <td>14</td>
+                              <td>Charulatha</td>
+                              <td>charu@gmail.com</td>
+                              <td>91-9658743210</td>
+                              <td>2</td>
+                              <td>18-03-2020</td>
+                              <td>
+                                 <button class="edit-btn">edit</button>
+                                 <button class="dl-btn ">delete</button>
+                              </td>
+                           </tr>
+                           <tr *ngFor="let tutor of tutorsList">
+                              <td>30</td>
+                              <td>janaki</td>
+                              <td>janu@gmail.com</td>
+                              <td>91-9632587041</td>
+                              <td>3</td>
+                              <td>14-02-2020</td>
+                              <td>
+                                 <button class="edit-btn">edit</button>
+                                 <button class="dl-btn ">delete</button>
+                              </td>
+                           </tr>
+                           <tr *ngFor="let tutor of tutorsList">
+                              <td>70</td>
+                              <td>merlin</td>
+                              <td>merli@gmail.com</td>
+                              <td>91-9874653210</td>
+                              <td>10</td>
+                              <td>27-01-2020</td>
+                              <td>
+                                 <button class="edit-btn">edit</button>
+                                 <button class="dl-btn ">delete</button>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </section>
+            </div>
+         </div>
+      </div>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="../node_modules/popper.js/dist/popper.min.js"></script>
+      <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script> 
+   </body>
+</html>

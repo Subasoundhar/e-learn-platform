@@ -1,0 +1,231 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="../app/css/reset.css">
+      <link rel="stylesheet" href="../app/css/main.css">
+      <title>tutor1</title>
+   </head>
+   <body>
+      <section class="h1">
+         <div class="container-fluid-1">
+            <div class="row mr-0">
+               <div class="col-11">
+                  <div class="logo">
+                     <a routerLink="/">E-Learning Platform</a>
+                  </div>
+               </div>        
+               <div class="col-0">
+                  <div class="btn-link">
+                     <a routerLink="/">Logout</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>   
+      <div class="row">
+         <div class="col-3">
+            <div class="list-group-1">
+                <a href="tutor1.html" class="list-group-item list-group-item-action active">Tutors</a>
+                <a href="learner1.html" class="list-group-item list-group-item-action">Learners</a>
+                <a href="course1.html" class="list-group-item list-group-item-action">Courses</a>
+            </div>
+         </div>
+         <div class="col-9">
+            <div class="mainpage1">
+               <section class="detail-part">
+                     <div class="banner-sec">
+                        <div class="row">
+                           <div class="col-9">
+                              <div class="banner-text">
+                                 <ul class="nav">
+                                    <li class="nav-item">
+                                       <h4 class="nav-link active">Home/Tutor</h4>
+                                    </li>
+                                 </ul>
+                                 <h2>Tutors</h2>
+                              </div>
+                           </div>
+                           <div class="col-2">
+                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                 Create New
+                              </button>
+                              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                 <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                       <div class="modal-header">
+                                          <h4 class="Create Tutor" id="exampleModalLabel">Create Tutor</h4>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                             <span aria-hidden="true">&times;</span>
+                                          </button>
+                                       </div>
+                                       <div class="modal-body">
+                                          <form>
+                                             <div class="form-group">
+                                                <div class="row">
+                                                   <div class="col-4">
+                                                      <label for="formGroupTutorName">Tutor Name</label>
+                                                   </div>  
+                                                   <div class="col-8">
+                                                      <input type="text" class="form-control" id="formGroupTutorName" placeholder="TutorName">
+                                                   </div>
+                                                </div>  
+                                             </div>
+                                             <div class="form-group">
+                                                <div class="row">
+                                                   <div class="col-4">
+                                                         <label for="formGroupEmailID">Email ID</label>
+                                                   </div>  
+                                                   <div class="col-8">
+                                                      <input type="text" class="form-control" id="formGroupEmailID" placeholder="EmailID">
+                                                   </div>
+                                                </div>  
+                                             </div>
+                                             <div class="form-group">
+                                                <div class="row">
+                                                   <div class="col-4">
+                                                      <label for="formGroupPhoneNumber">Phone Number</label>
+                                                   </div>  
+                                                   <div class="col-8">
+                                                      <input type="text" class="form-control" id="formGroupPhoneNumber" placeholder="PhoneNumber">
+                                                   </div>
+                                                </div>  
+                                             </div>
+                                          </form>
+                                       </div>
+                                       <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">save</button>
+                                          <button type="button" class="btn btn-primary">Cancel</button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  <div class="table-part">
+                     <table class="table">
+                        <thead>
+                           <tr>
+                              <th>Tutor Id</th>
+                              <th>Tutor Name</th>
+                              <th>Email ID</th>
+                              <th>Mobile Number</th>
+                              <th>Courses Count</th>
+                              <th>Created Date</th>
+                              <th>Action</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr *ngFor="let tutor of tutorsList">
+                              <td>15</td>
+                              <td>Malini</td>
+                              <td>malini@gmail.com</td>
+                              <td>91-9325870414</td>
+                              <td>10</td>
+                              <td>15-11-2019</td>
+                              <td>
+                                 <button class="edit-btn">edit</button>
+                                 <button class="dl-btn ">delete</button>
+                              </td>
+                           </tr>
+                           <tr *ngFor="let tutor of tutorsList">
+                              <td>45</td>
+                              <td>Sandy</td>
+                              <td>sandy@gmail.com</td>
+                              <td>91-9855653210</td>
+                              <td>4</td>
+                              <td>28-03-2020</td>
+                              <td>
+                                 <button class="edit-btn">edit</button>
+                                 <button class="dl-btn ">delete</button>
+                              </td>
+                           </tr>
+                           <tr *ngFor="let tutor of tutorsList">
+                              <td>12</td>
+                              <td>Ajai</td>
+                              <td>ajai@gmail.com</td>
+                              <td>91-9232587041</td>
+                              <td>5</td>
+                              <td>3-10-2019</td>
+                              <td>
+                                 <button class="edit-btn">edit</button>
+                                 <button class="dl-btn ">delete</button>
+                              </td>
+                           </tr>
+                           <tr *ngFor="let tutor of tutorsList">
+                              <td>46</td>
+                              <td>Silveya</td>
+                              <td>silveya@gmail.com</td>
+                              <td>91-7852146330</td>
+                              <td>8</td>
+                              <td>19-01-2020</td>
+                              <td>
+                                 <button class="edit-btn">edit</button>
+                                 <button class="dl-btn ">delete</button>
+                              </td>
+                           </tr>
+                           <tr *ngFor="let tutor of tutorsList">
+                              <td>5</td>
+                              <td>Nandhini</td>
+                              <td>nandhu@gmail.com</td>
+                              <td>91-8621458730</td>
+                              <td>7</td>
+                              <td>15-01-2020</td>
+                              <td>
+                                 <button class="edit-btn">edit</button>
+                                 <button class="dl-btn ">delete</button>
+                              </td>
+                           </tr>
+                           <tr *ngFor="let tutor of tutorsList">
+                              <td>78</td>
+                              <td>Sakthi</td>
+                              <td>sakthi@gmail.com</td>
+                              <td>91-9658743210</td>
+                              <td>4</td>
+                              <td>20-12-2020</td>
+                              <td>
+                                 <button class="edit-btn">edit</button>
+                                 <button class="dl-btn ">delete</button>
+                              </td>
+                           </tr>
+                           <tr *ngFor="let tutor of tutorsList">
+                              <td>4</td>
+                              <td>Archana</td>
+                              <td>archana@gmail.com</td>
+                              <td>91-8732587041</td>
+                              <td>20</td>
+                              <td>14-01-2020</td>
+                              <td>
+                                 <button class="edit-btn">edit</button>
+                                 <button class="dl-btn ">delete</button>
+                              </td>
+                           </tr>
+                           <tr *ngFor="let tutor of tutorsList">
+                              <td>13</td>
+                              <td>Arivarasan</td>
+                              <td>arivarasan@gmail.com</td>
+                              <td>91-8874653210</td>
+                              <td>12</td>
+                              <td>19-01-2020</td>
+                              <td>
+                                 <button class="edit-btn">edit</button>
+                                 <button class="dl-btn ">delete</button>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </section>
+            </div>
+         </div>
+      </div>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="../node_modules/popper.js/dist/popper.min.js"></script>
+      <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script> 
+   </body>
+</html>
